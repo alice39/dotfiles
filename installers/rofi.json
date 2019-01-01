@@ -1,0 +1,8 @@
+{
+    "name": "Rofi",
+    "author": "DaveDavenport",
+    "depends": [
+    ],
+    "config_dir": "rofi",
+    "install_dir": "{DOT_INSTALL_DIR}/.config/rofi"
+}

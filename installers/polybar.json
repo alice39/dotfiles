@@ -1,0 +1,8 @@
+{
+    "name": "polybar",
+    "author": "jaagr",
+    "depends": [
+    ],
+    "config_dir": "polybar",
+    "install_dir": "{DOT_INSTALL_DIR}/.config/polybar"
+}

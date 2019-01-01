@@ -1,0 +1,11 @@
+{
+    "name": "i3 Window Manager (gaps)",
+    "author": "Airblader",
+    "depends": [
+        "polybar",
+        "rofi",
+        "wallpaper"
+    ],
+    "config_dir": "i3",
+    "install_dir": "{DOT_INSTALL_DIR}/.config/i3"
+}

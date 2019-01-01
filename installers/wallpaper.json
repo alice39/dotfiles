@@ -1,0 +1,11 @@
+{
+    "name": "Wallpaper",
+    "author": "EyeDevelop",
+    "depends": [
+    ],
+    "config_dir": "wallpaper",
+    "config_files": {
+        "wallpaper.png": "{DOT_INSTALL_DIR}/.config/wallpaper.png",
+        "fehbg": "{DOT_INSTALL_DIR}/.fehbg"
+    }
+}
