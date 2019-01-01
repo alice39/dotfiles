@@ -1,1 +1,3 @@
 .idea/
+testdir/
+__pycache__/
