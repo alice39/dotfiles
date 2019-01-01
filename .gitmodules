@@ -10,9 +10,6 @@
 [submodule "apps/rofi"]
 	path = apps/rofi
 	url = https://github.com/davedavenport/rofi
-[submodule "apps/rofi-themes"]
-	path = apps/rofi-themes
-	url = https://github.com/davedavenport/rofi-themes
 [submodule "apps/polybar"]
 	path = apps/polybar
 	url = https://github.com/jaagr/polybar
