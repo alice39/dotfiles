@@ -1,0 +1,24 @@
+[submodule "apps/powerline"]
+	path = apps/powerline
+	url = https://github.com/powerline/powerline
+[submodule "apps/powerline-fonts"]
+	path = apps/powerline-fonts
+	url = https://github.com/powerline/fonts
+[submodule "apps/oh-my-zsh"]
+	path = apps/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "apps/rofi"]
+	path = apps/rofi
+	url = https://github.com/davedavenport/rofi
+[submodule "apps/rofi-themes"]
+	path = apps/rofi-themes
+	url = https://github.com/davedavenport/rofi-themes
+[submodule "apps/polybar"]
+	path = apps/polybar
+	url = https://github.com/jaagr/polybar
+[submodule "apps/refind-ambience"]
+	path = apps/refind-ambience
+	url = https://github.com/lukechilds/refind-ambience
+[submodule "apps/poly-dark"]
+	path = apps/poly-dark
+	url = https://github.com/shvchk/poly-dark
