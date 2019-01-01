@@ -1,0 +1,8 @@
+configuration {
+	modi: "window,run,drun,ssh";
+        terminal: "termite";
+        ssh-client: "ssh";
+        ssh-command: "{terminal} -e '{ssh-client} {host}'";
+        run-shell-command: "{terminal} -e '{cmd}'";
+}
+@import "/home/eyedevelop/.config/rofi/themes/oxide.rasi"
