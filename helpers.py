@@ -18,7 +18,11 @@ def scan_for_installers(dot_install_dir):
                 try:
                     # Add the install data to installers.
                     data = json.loads(file_contents)
-                    installers[installer[:-5]] = data
+                    name = installer[:-5]
+                    if "module_name" in data.keys():
+                        name = data["module_name"]
+
+                    installers[name] = data
                 except json.JSONDecodeError:  # It was not a valid json file.
                     logger.warn("{} is not a valid installer!".format(installer))
 

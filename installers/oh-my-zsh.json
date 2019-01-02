@@ -1,10 +1,6 @@
 {
-    "name": "Oh My Zsh",
-    "author": "robbyrussell",
-    "depends": [
-    ],
-    "config_dir": "zsh",
-    "config_files": {
-        "zshrc": "{DOT_INSTALL_DIR}/.zshrc"
-    }
+    "module_name": "sh:oh-my-zsh",
+    "installer": "tools/install.sh",
+    "arguments": "",
+    "working_dir": "apps/oh-my-zsh"
 }

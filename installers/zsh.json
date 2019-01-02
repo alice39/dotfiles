@@ -1,0 +1,13 @@
+{
+    "name": "Oh My Zsh",
+    "author": "robbyrussell",
+    "depends": [
+        "sh:oh-my-zsh",
+        "sh:powerline",
+        "sh:powerline-fonts"
+    ],
+    "config_dir": "zsh",
+    "config_files": {
+        "zshrc": "{DOT_INSTALL_DIR}/.zshrc"
+    }
+}

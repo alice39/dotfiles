@@ -6,45 +6,9 @@ import sys
 
 from config import logger
 import helpers
+from install_module import install_module
 
 __author__ = "EyeDevelop"
-
-
-def install_module(module_name, dot_install_dir, available_modules, is_dependency=False):
-    # Cannot install a module if it doesn't have an installer.
-    if module_name not in available_modules.keys():
-        logger.error("{} is not installable.".format(module_name))
-        return False
-
-    module = available_modules[module_name]
-
-    dependency_str = " dependency" if is_dependency else ""
-    logger.info("Installing{}: {}".format(dependency_str, module_name))
-
-    # Install the module's dependencies first (if any).
-    logger.debug("Found dependencies for {}.".format(module_name))
-    if len(module["depends"]) > 0:
-        for dependency in module["depends"]:
-            if not install_module(dependency, dot_install_dir, available_modules, is_dependency=True):
-                logger.critical("{} could not install dependency {}.".format(module_name, dependency))
-
-    # Check if the entire directory can be installed.
-    if "install_dir" in module.keys():
-        install_dir = module["install_dir"]
-        logger.debug("[{}] Installing entire directory to {}.".format(module_name, install_dir))
-
-        source_dir = helpers.get_config(module["config_dir"])
-        helpers.symlink(source_dir, install_dir, is_directory=True)
-    else:
-        for config_file in module["config_files"]:
-            install_location = module["config_files"][config_file]
-            logger.debug("[{}] Installing {} to {}.".format(module_name, config_file, install_location))
-
-            source_file = helpers.get_config(module["config_dir"], config_file)
-            helpers.symlink(source_file, install_location)
-
-    # Module has been successfully installed.
-    return True
 
 
 def print_help():
@@ -113,22 +77,25 @@ def main():
             dependency_modules.append(dependency)
 
     for module in dependency_modules:
-        modules.remove(module)
+        if module in modules:
+            modules.remove(module)
 
     logger.debug("Installation directory: {}".format(install_dir))
 
     for module in modules:
-        try:
+        # try:
             install_module(module, install_dir, available_modules)
-        except Exception as e:
-            logger.error("Failed to install {}\n    {}".format(module, e))
+        # except Exception as e:
+        #     logger.error("Failed to install {}\n    {}".format(module, e))
 
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as e:
-        logger.fatal(e)
-        exit(1)
-    except KeyboardInterrupt:
-        exit(1)
+    # try:
+    #     main()
+    # except Exception as e:
+    #     logger.fatal(e)
+    #     exit(1)
+    # except KeyboardInterrupt:
+    #     exit(1)
+
+    main()

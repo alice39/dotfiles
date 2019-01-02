@@ -13,3 +13,9 @@
 [submodule "apps/poly-dark"]
 	path = apps/poly-dark
 	url = https://github.com/shvchk/poly-dark
+[submodule "apps/powerline"]
+	path = apps/powerline
+	url = https://github.com/powerline/powerline
+[submodule "apps/powerline-fonts"]
+	path = apps/powerline-fonts
+	url = https://github.com/powerline/fonts
