@@ -15,6 +15,12 @@ This script assumes the following is installed:
   * fehbg
 * neofetch (optional)
 
+### Submodules
+Please initialise the submodules before executing the installer.
+```bash
+git submodule update --init --recursive
+```
+
 **Warning:** Please look at the code before you execute blindly.
 
 The helper install script:
