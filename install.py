@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
+import getopt
 import logging
 import os
-import getopt
 import sys
 
-from config import logger
 import helpers
+from config import logger
 from install_module import install_module
 
 __author__ = "EyeDevelop"

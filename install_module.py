@@ -1,9 +1,7 @@
 import os
-import sys
 
 import helper_classes
 import helpers
-import subprocess
 from config import logger, BASE_DIR
 
 

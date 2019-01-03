@@ -1,7 +1,7 @@
 import os
+import queue
 import subprocess
 import threading
-import queue
 
 from config import BASE_DIR
 
