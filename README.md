@@ -39,7 +39,7 @@ You can look at what can be installed by looking in the 'installers' folder.
 ## Updating
 > "Because re-installation sucks."
 
-**Same warning applies as listed under [Installation](#installation)**
+**Same warning applies as listed above.**
 
 Just use the Update helper script.
 ```bash
