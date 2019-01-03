@@ -21,6 +21,7 @@ Please initialise the submodules before executing the installer.
 git submodule update --init --recursive
 ```
 
+### Actual installing! (yay)
 **Warning:** Please look at the code before you execute blindly.
 
 The helper install script:
@@ -36,6 +37,8 @@ To install all the dotfiles in the user's home directory:
 You can look at what can be installed by looking in the 'installers' folder.
 
 ## Updating
+> "Because re-installation sucks."
+
 **Same warning applies as listed under [Installation](#installation)**
 
 Just use the Update helper script.
