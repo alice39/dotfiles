@@ -49,6 +49,7 @@ def main():
                 handler.setLevel(logging.DEBUG)
         elif option in ("-h", "--help"):
             print_help()
+            exit(0)
         elif option in ("-d", "--installdir"):
             install_dir = os.path.abspath(argument)
         elif option in ("-m", "--modules"):
