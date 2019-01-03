@@ -67,8 +67,8 @@ plugins=(
 )
 
 # Start powerline
-powerline-daemon -q
-. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+python ~/.powerline/powerline-daemon -q
+. ~/.powerline/powerline.zsh
 
 DEFAULT_USER=$(whoami)
 source $ZSH/oh-my-zsh.sh
@@ -102,5 +102,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Start neofetch
-neofetch
+# Start neofetch (if exists)
+if type neofetch &>/dev/null; then neofetch; fi

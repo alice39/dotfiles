@@ -1,6 +1,6 @@
 {
     "module_name": "sh:powerline",
-    "installer": "python3 -m pip install .",
+    "installer": "../../custom_install_scripts/powerline.sh",
     "arguments": "",
     "working_dir": "apps/powerline"
 }
