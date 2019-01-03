@@ -1,3 +1,4 @@
 .idea/
 testdir/
 __pycache__/
+process_output.log
