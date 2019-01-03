@@ -22,7 +22,7 @@ def print_help():
     print("IMPORTANT: Installation directory has to be set before modules are picked.")
     print("\nExample:\n"
           "Installs all modules in the home directory:\n"
-          "./install.py -d /home/user -m all\n")
+          "./install.py -d ~/ -m all\n")
     exit(0)
 
 
@@ -83,19 +83,17 @@ def main():
     logger.debug("Installation directory: {}".format(install_dir))
 
     for module in modules:
-        # try:
+        try:
             install_module(module, install_dir, available_modules)
-        # except Exception as e:
-        #     logger.error("Failed to install {}\n    {}".format(module, e))
+        except Exception as e:
+            logger.error("Failed to install {}\n    {}".format(module, e))
 
 
 if __name__ == '__main__':
-    # try:
-    #     main()
-    # except Exception as e:
-    #     logger.fatal(e)
-    #     exit(1)
-    # except KeyboardInterrupt:
-    #     exit(1)
-
-    main()
+    try:
+        main()
+    except Exception as e:
+        logger.fatal(e)
+        exit(1)
+    except KeyboardInterrupt:
+        exit(1)

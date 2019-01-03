@@ -5,7 +5,7 @@ import helpers
 from config import logger, BASE_DIR
 
 
-def install_module(module_name, dot_install_dir, available_modules, is_dependency=False):
+def install_module(module_name, dot_install_dir, available_modules, is_dependency=False, install_dependencies=True):
     # Cannot install a module if it doesn't have an installer.
     if module_name not in available_modules.keys():
         logger.error("{} is not installable.".format(module_name))
@@ -27,12 +27,13 @@ def install_module(module_name, dot_install_dir, available_modules, is_dependenc
     logger.info("Installing{}: {}".format(dependency_str, module_name))
 
     # Install the module's dependencies first (if any).
-    logger.debug("Found dependencies for {}.".format(module_name))
-    if len(module["depends"]) > 0:
-        for dependency in module["depends"]:
-            if not install_module(dependency, dot_install_dir, available_modules, is_dependency=True):
-                logger.critical("{} could not install dependency {}.".format(module_name, dependency))
-                return False
+    if install_dependencies:
+        logger.debug("Found dependencies for {}.".format(module_name))
+        if len(module["depends"]) > 0:
+            for dependency in module["depends"]:
+                if not install_module(dependency, dot_install_dir, available_modules, is_dependency=True):
+                    logger.critical("{} could not install dependency {}.".format(module_name, dependency))
+                    return False
 
     # Check if the entire directory can be installed.
     if "install_dir" in module.keys():
