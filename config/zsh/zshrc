@@ -67,7 +67,7 @@ plugins=(
 )
 
 # Start powerline
-python ~/.powerline/powerline-daemon -q
+python3 ~/.powerline/powerline-daemon -q
 . ~/.powerline/powerline.zsh
 
 DEFAULT_USER=$(whoami)
