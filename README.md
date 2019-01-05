@@ -7,7 +7,7 @@ This script assumes the following is installed:
 * git
 * zsh:
   * zsh
-  * python (2 or 3)
+  * python 3
 * i3:
   * i3-gaps
   * polybar
