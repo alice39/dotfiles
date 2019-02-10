@@ -42,7 +42,8 @@ pacman -S i3-gaps  \
   ttf-roboto vlc   \
   xorg-server      \
   xorg-apps        \
-  gdm
+  gdm              \
+  code
 
 yay -S google-chrome \
   polybar            \
