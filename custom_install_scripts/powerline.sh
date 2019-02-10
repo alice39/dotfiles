@@ -3,7 +3,7 @@
 # Please run me from apps/powerline.
 
 # Install powerline
-python3 -m pip install .
+sudo python3 -m pip install .
 
 # Move the powerline-daemon script to the users home folder.
 echo Creating powerline directory...
