@@ -74,8 +74,9 @@ def main():
     # Remove the dependency modules from the list so they don't get installed twice.
     dependency_modules = []
     for module in modules:
-        for dependency in available_modules[module]["depends"]:
-            dependency_modules.append(dependency)
+        if "depends" in available_modules[module].keys():
+            for dependency in available_modules[module]["depends"]:
+                dependency_modules.append(dependency)
 
     for module in dependency_modules:
         if module in modules:

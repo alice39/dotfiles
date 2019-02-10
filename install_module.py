@@ -28,12 +28,13 @@ def install_module(module_name, dot_install_dir, available_modules, is_dependenc
 
     # Install the module's dependencies first (if any).
     if install_dependencies:
-        logger.debug("Found dependencies for {}.".format(module_name))
-        if len(module["depends"]) > 0:
-            for dependency in module["depends"]:
-                if not install_module(dependency, dot_install_dir, available_modules, is_dependency=True):
-                    logger.critical("{} could not install dependency {}.".format(module_name, dependency))
-                    return False
+        if "depends" in module.keys():
+            logger.debug("Found dependencies for {}.".format(module_name))
+            if len(module["depends"]) > 0:
+                for dependency in module["depends"]:
+                    if not install_module(dependency, dot_install_dir, available_modules, is_dependency=True):
+                        logger.critical("{} could not install dependency {}.".format(module_name, dependency))
+                        return False
 
     # Check if the entire directory can be installed.
     if "install_dir" in module.keys():
