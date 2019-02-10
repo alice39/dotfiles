@@ -41,6 +41,10 @@ bindsym $mod+d exec rofi -show drun
 # start rofi ssh
 bindsym $mod+m exec rofi -show ssh
 
+# start applets
+exec --no-startup-id nm-applet
+exec --no-startup-id pasystray
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down

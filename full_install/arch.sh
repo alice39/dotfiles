@@ -18,36 +18,38 @@ makepkg -si
 cd ~/
 
 # Install deps
-pacman -S i3-gaps  \
-  rofi             \
-  feh              \
-  python3          \
-  python-pip       \
-  zsh              \
-  neofetch         \
-  compton          \
-  blueman          \
-  gnu-netcat       \
-  light            \
-  nautilus         \
-  networkmanager   \
-  ntp              \
-  openssh          \
-  pavucontrol      \
-  playerctl        \
-  rsync            \
-  termite          \
-  ttf-dejavu       \
-  ttf-font-awesome \
-  ttf-roboto vlc   \
-  xorg-server      \
-  xorg-apps        \
-  gdm              \
-  code
+pacman -S i3-gaps        \
+  rofi                   \
+  feh                    \
+  python3                \
+  python-pip             \
+  zsh                    \
+  neofetch               \
+  compton                \
+  blueman                \
+  gnu-netcat             \
+  light                  \
+  nautilus               \
+  networkmanager         \
+  ntp                    \
+  openssh                \
+  pavucontrol            \
+  playerctl              \
+  rsync                  \
+  termite                \
+  ttf-dejavu             \
+  ttf-font-awesome       \
+  ttf-roboto vlc         \
+  xorg-server            \
+  xorg-apps              \
+  gdm                    \
+  code                   \
+  network-manager-applet \
+  pasystray
 
-yay -S google-chrome \
-  polybar            \
-  caffeine           \
+yay -S google-chrome     \
+  polybar                \
+  caffeine               \
   i3lock-color
 
 # Enable the required services

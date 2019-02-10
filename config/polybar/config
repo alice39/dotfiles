@@ -1,5 +1,4 @@
 [bar/top]
-#monitor = eDP-1
 width = 100%
 height = 34
 
@@ -11,18 +10,21 @@ line-size = 16
 
 spacing = 2
 padding-right = 5
-module-margin = 4
+module-margin = 3
 
-font-0 = NotoSans-Regular:size=8;-1
-font-1 = MaterialIcons:size=10;0
-font-2 = Termsynu:size=8:antialias=false;-2
-font-3 = FontAwesome:size=10;0
+font-0 = NotoSans-Regular:size=8;1
+font-1 = Font Awesome 5 Free:style=Regular:pixelsize=11;1
+font-2 = Font Awesome 5 Free:style=Solid:pixelsize=11;1
 
 modules-left = mpd
-modules-right = volume backlight wireless-network wired-network battery date
+modules-right = wireless-network wired-network backlight volume battery date
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-padding = 0
 
 [bar/bottom]
-#monitor = eDP-1
 bottom = true
 width = 100%
 height = 27
@@ -38,12 +40,9 @@ padding-right = 4
 module-margin-left = 0
 module-margin-right = 6
 
-font-0 = NotoSans-Regular:size=8;0
-font-1 = unifont:size=6;-3
-font-2 = FontAwesome:size=8;-2
-font-3 = NotoSans-Regular:size=8;-1
-font-4 = MaterialIcons:size=10;-1
-font-5 = Termsynu:size=8:antialias=false;0
+font-0 = NotoSans-Regular:size=8;-1
+font-1 = Font Awesome 5 Free:style=Regular:pixelsize=8;1
+font-2 = Font Awesome 5 Free:style=Solid:pixelsize=8;1
 
 modules-left = i3
 modules-right = cpu memory
@@ -51,39 +50,32 @@ modules-right = cpu memory
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
-format = Brightness:  <bar>
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-font = 3
-bar-indicator-foreground = #ff
-bar-fill = ─
-bar-fill-font = 3
-bar-fill-foreground = #c9665e
-bar-empty = ─
-bar-empty-font = 3
-bar-empty-foreground = #44
+format =   <label>
+label = %percentage%%
 
 [module/battery]
 type = internal/battery
 full-at = 98
 
-format-charging = <label-charging>
-format-discharging = <label-discharging>
-format-full = <label-full>
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
 
-label-discharging = Battery:  V | %{F#fba922}%percentage%% %{F#999}| %time%
-label-charging = Battery:  ^ | %{F#fba922}%percentage%%
-label-full = Battery full
+label-discharging = %percentage%% %{F#999}| %time%
+label-charging = %percentage%% %{F#999}| %time%
 
-bar-capacity-width = 10
-bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
-bar-capacity-fill = █
-bar-capacity-fill-foreground = #ddffffff
-bar-capacity-fill-font = 3
-bar-capacity-empty = █
-bar-capacity-empty-font = 3
-bar-capacity-empty-foreground = #44ffffff
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
 
 [module/i3]
 type = internal/i3
@@ -162,12 +154,12 @@ bar-load-empty-foreground = #444444
 type = internal/mpd
 format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat>  <bar-progress> <label-time>  <label-song>
 
-icon-play = >|
-icon-pause = ||
-icon-stop = []
-icon-prev = <<
-icon-next = >>
-icon-repeat = |<
+icon-play =  
+icon-pause =  
+icon-stop =  
+icon-prev =  
+icon-next =  
+icon-repeat =  
 
 toggle-on-foreground =
 toggle-off-foreground = #55
@@ -190,9 +182,9 @@ interface = wlp3s0
 interval = 3.0
 ping-interval = 10
 
-format-connected = Wifi:  <label-connected>
+format-connected =   <label-connected>
 label-connected = %essid% | %{F#fba922}%local_ip%
-label-disconnected = Wifi:  not connected
+label-disconnected =   not connected
 label-disconnected-foreground = #66
 
 [module/wired-network]
@@ -200,14 +192,17 @@ type = internal/network
 interface = net0
 interval = 3.0
 
-label-connected = Wired:  %{F#fba922}%local_ip%
+label-connected =   %{F#fba922}%local_ip%
 label-disconnected-foreground = #66
 
 [module/volume]
 type = internal/pulseaudio
 
-format-volume = Vol:  <label-volume>
-label-muted = Vol: muted
+format-volume = <ramp-volume> <label-volume>
+label-muted =   
 label-muted-foreground = #66
 
 label-volume = %percentage%%
+ramp-volume-0 =   
+ramp-volume-1 =   
+ramp-volume-2 =   
