@@ -6,6 +6,7 @@
     "config_dir": "wallpaper",
     "config_files": {
         "wallpaper.png": "{DOT_INSTALL_DIR}/.config/wallpaper.png",
+        "lockscreen.jpg": "{DOT_INSTALL_DIR}/.config/lockscreen.jpg",
         "fehbg": "{DOT_INSTALL_DIR}/.fehbg"
     }
 }

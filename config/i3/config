@@ -200,3 +200,6 @@ bindsym XF86MonBrightnessDown exec light -U 5
 
 # Allow natural scrolling
 bindsym $mod+n exec xinput set-prop 13 286 1
+
+# Make shortcut for locking the screen
+bindsym $mod+p exec ~/.config/i3/lock_screen.sh
