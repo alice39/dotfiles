@@ -4,7 +4,8 @@
     "depends": [
         "polybar",
         "rofi",
-        "wallpaper"
+        "wallpaper",
+        "compton"
     ],
     "config_dir": "i3",
     "install_dir": "{DOT_INSTALL_DIR}/.config/i3"

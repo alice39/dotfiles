@@ -1,0 +1,10 @@
+{
+    "name": "Compton Composite Manager",
+    "author": "cjj",
+    "depends": [
+    ],
+    "config_dir": "compton",
+    "config_files": {
+        "compton.conf": "{DOT_INSTALL_DIR}/.config/compton.conf"
+    }
+}
