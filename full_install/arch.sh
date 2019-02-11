@@ -45,7 +45,8 @@ pacman -S i3-gaps        \
   gdm                    \
   code                   \
   network-manager-applet \
-  pasystray
+  pasystray              \
+  maim
 
 yay -S google-chrome     \
   polybar                \
