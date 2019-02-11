@@ -16,7 +16,7 @@ font-0 = NotoSans-Regular:size=8;1
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=11;1
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=11;1
 
-modules-left = mpd
+modules-left = player-mpris
 modules-right = wireless-network wired-network backlight volume battery date
 
 tray-position = right
@@ -150,31 +150,10 @@ bar-load-empty = ─
 bar-load-empty-font = 6
 bar-load-empty-foreground = #444444
 
-[module/mpd]
-type = internal/mpd
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat>  <bar-progress> <label-time>  <label-song>
-
-icon-play =  
-icon-pause =  
-icon-stop =  
-icon-prev =  
-icon-next =  
-icon-repeat =  
-
-toggle-on-foreground =
-toggle-off-foreground = #55
-
-bar-progress-width = 45
-bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
-bar-progress-indicator = |
-bar-progress-indicator-foreground = #ff
-bar-progress-indicator-font = 3
-bar-progress-fill = ─
-bar-progress-fill-foreground = #bb
-bar-progress-fill-font = 3
-bar-progress-empty = ─
-bar-progress-empty-font = 3
-bar-progress-empty-foreground = #44
+[module/player-mpris]
+type = custom/script
+exec = ~/.config/polybar/scripts/player-mpris.sh
+interval = 1
 
 [module/wireless-network]
 type = internal/network
