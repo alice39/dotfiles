@@ -35,33 +35,20 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi
+# bind rofi
 bindsym $mod+d exec rofi -show drun
 
-# start rofi ssh
+# bind rofi ssh
 bindsym $mod+m exec rofi -show ssh
 
 # start applets
 exec --no-startup-id nm-applet
-exec --no-startup-id pasystray
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -193,6 +180,10 @@ new_window pixel 0
 # Set media keys
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0; exec pactl play-sample audio-volume-change @DEFAULT_SINK@
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0; exec pactl play-sample audio-volume-change @DEFAULT_SINK@
+
+bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl-set-sink-mute @DEFAULT_SINK@ 0
+bindsym Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle; exec pactl play-sample audio-volume-change @DEFAULT_SINK@
 
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -207,3 +198,6 @@ bindsym $mod+n exec xinput set-prop 13 286 1
 
 # Make shortcut for locking the screen
 bindsym $mod+p exec ~/.config/i3/lock_screen.sh
+
+# Autolock after inactivity
+exec --no-startup-id xautolock -time 10 -locker '~/.config/i3/lock_screen.sh'
