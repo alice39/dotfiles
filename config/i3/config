@@ -162,8 +162,9 @@ exec_always --no-startup-id $HOME/.fehbg
 # Start compton
 exec --no-startup-id compton -b
 
-# Launch nm-applet
+# Launch applets
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 
 # Launch caffeine
 exec --no-startup-id caffeine
