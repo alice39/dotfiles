@@ -1,24 +1,25 @@
 #!/bin/bash
 
-if [[ ${EUID} -ne 0 ]]; then
-  echo "Please run as root."
+if [[ ${EUID} -eq 0 ]]; then
+  echo "Please don't run as root."
   exit 1
 fi
 
 # Update system first
-pacman -Syu
+sudo pacman -Syu
 
 # Install build tools
-pacman -S git base-devel
+sudo pacman -S git base-devel
 
 # Install yay
+cd /tmp/
 git clone https://aur.archlinux.org/yay.git yay
 cd yay
 makepkg -si
 cd ~/
 
 # Install deps
-pacman -S i3-gaps        \
+sudo pacman -S i3-gaps   \
   rofi                   \
   feh                    \
   python3                \
@@ -54,7 +55,7 @@ yay -S google-chrome     \
   i3lock-color
 
 # Enable the required services
-systemctl enable gdm NetworkManager bluetooth
+sudo systemctl enable gdm NetworkManager bluetooth
 
 # Clone the repo
 git clone https://github.com/EyeDevelop/dotfiles ~/.dotfiles
