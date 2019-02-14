@@ -200,9 +200,6 @@ bindsym $mod+n exec xinput set-prop 13 286 1
 # Make shortcut for locking the screen
 bindsym $mod+p exec ~/.config/i3/lock_screen.sh
 
-# Autolock after inactivity
-exec --no-startup-id xautolock -time 10 -locker '~/.config/i3/lock_screen.sh'
-
 # Screenshot bindings
 bindsym Mod4+Shift+3 exec maim ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
 bindsym Mod4+Control+Shift+3 exec maim | xclip -selection clipboard -t image/png
