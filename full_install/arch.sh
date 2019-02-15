@@ -40,14 +40,18 @@ sudo pacman -S i3-gaps   \
   termite                \
   ttf-dejavu             \
   ttf-font-awesome       \
-  ttf-roboto vlc         \
+  ttf-roboto             \
+  noto-fonts             \
+  noto-fonts-emoji       \
+  vlc                    \
   xorg-server            \
   xorg-apps              \
   gdm                    \
   code                   \
   network-manager-applet \
   pasystray              \
-  maim
+  maim                   \
+  arc-gtk-theme
 
 yay -S google-chrome     \
   polybar                \

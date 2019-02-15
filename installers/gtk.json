@@ -1,0 +1,11 @@
+{
+    "name": "GTK Theme",
+    "author": "eyedevelop",
+    "depends": [
+    ],
+    "config_dir": "gtk",
+    "config_files": {
+        "settings.ini": "{DOT_INSTALL_DIR}/.config/gtk-3.0/settings.ini",
+        "gtkrc-2.0": "{DOT_INSTALL_DIR}/.gtkrc-2.0"
+    }
+}
