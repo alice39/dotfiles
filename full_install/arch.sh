@@ -43,15 +43,19 @@ sudo pacman -S i3-gaps   \
   ttf-roboto             \
   noto-fonts             \
   noto-fonts-emoji       \
+  font-mathematica       \
   vlc                    \
   xorg-server            \
   xorg-apps              \
   gdm                    \
   code                   \
   network-manager-applet \
-  pasystray              \
   maim                   \
-  arc-gtk-theme
+  gtk3                   \
+  gtk2                   \
+  arc-gtk-theme          \
+  arc-icon-theme         \
+  caffeine
 
 yay -S google-chrome     \
   polybar                \
