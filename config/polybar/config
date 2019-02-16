@@ -92,7 +92,7 @@ enable-click = false
 enable-scroll = false
 
 label-focused = %index%
-label-focused-foreground = #ffffff
+label-focused-foreground = #000000
 label-focused-background = #ffd700
 label-focused-padding = 4
 
