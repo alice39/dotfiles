@@ -6,10 +6,10 @@ if [[ ${EUID} -eq 0 ]]; then
 fi
 
 # Update system first
-sudo pacman -Syu
+sudo pacman --noconfirm -Syu
 
 # Install build tools
-sudo pacman -S git base-devel
+sudo pacman --noconfirm -S git base-devel
 
 # Install yay
 cd /tmp/
@@ -19,7 +19,8 @@ makepkg -si
 cd ~/
 
 # Install deps
-sudo pacman -S i3-gaps   \
+sudo pacman --noconfirm -S\
+  i3-gaps                \
   rofi                   \
   feh                    \
   python3                \
@@ -54,10 +55,10 @@ sudo pacman -S i3-gaps   \
   gtk3                   \
   gtk2                   \
   arc-gtk-theme          \
-  arc-icon-theme         \
-  caffeine
+  arc-icon-theme
 
-yay -S google-chrome     \
+yay -a -S\
+  google-chrome          \
   polybar                \
   caffeine               \
   i3lock-color
@@ -68,4 +69,5 @@ sudo systemctl enable gdm NetworkManager bluetooth
 # Clone the repo
 git clone https://github.com/EyeDevelop/dotfiles ~/.dotfiles
 cd ~/.dotfiles
+git submodule update --init --recursive
 python3 install.py -d ~/ -m all
