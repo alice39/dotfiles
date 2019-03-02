@@ -55,7 +55,8 @@ sudo pacman --noconfirm -S\
   gtk3                   \
   gtk2                   \
   arc-gtk-theme          \
-  arc-icon-theme
+  arc-icon-theme         \
+  notify-osd
 
 yay -a -S\
   google-chrome          \
