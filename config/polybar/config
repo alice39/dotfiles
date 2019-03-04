@@ -190,7 +190,7 @@ label-close = X
 label-separator =  |  
 
 menu-0-0 = Sleep
-menu-0-0-exec = /usr/bin/systemctl sleep
+menu-0-0-exec = /usr/bin/systemctl suspend
 
 menu-0-1 = Reboot
 menu-0-1-exec = /sbin/reboot
