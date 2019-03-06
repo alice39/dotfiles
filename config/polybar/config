@@ -1,6 +1,7 @@
 [bar/top]
 width = 100%
 height = 34
+monitor = ${env:MONITOR:}
 
 background = #f00a0a0a
 foreground = #ccffffff
@@ -28,6 +29,7 @@ tray-padding = 0
 bottom = true
 width = 100%
 height = 27
+monitor = ${env:MONITOR:}
 
 background = ${bar/top.background}
 foreground = ${bar/top.foreground}
