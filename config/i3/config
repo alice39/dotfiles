@@ -197,14 +197,16 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 bindsym XF86MonBrightnessUp exec light -A 5
+bindsym Shift+XF86MonBrightnessUp exec light -A 1
 bindsym XF86MonBrightnessDown exec light -U 5
+bindsym Shift+XF86MonBrightnessDown exec light -U 1
 
 # Make shortcut for locking the screen
 bindsym $mod+l exec ~/.config/i3/lock_screen.sh
 
 # Screenshot bindings
-bindsym Mod4+Shift+3 exec maim ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
-bindsym Mod4+Control+Shift+3 exec maim | xclip -selection clipboard -t image/png
+bindsym $super+Shift+3 exec maim ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
+bindsym $super+Control+Shift+3 exec maim | xclip -selection clipboard -t image/png
 
-bindsym Mod4+Shift+4 exec maim -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
-bindsym Mod4+Control+Shift+4 exec maim -s | xclip -selection clipboard -t image/png
+bindsym $super+Shift+4 exec maim -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
+bindsym $super+Control+Shift+4 exec maim -s | xclip -selection clipboard -t image/png
