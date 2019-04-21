@@ -18,7 +18,7 @@ font-1 = Font Awesome 5 Free:style=Regular:pixelsize=11;1
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=11;1
 
 modules-left = power-menu player-mpris
-modules-right = wireless-network wired-network backlight volume battery date
+modules-right = wireless-network wired-network backlight volume filesystem battery date
 
 tray-position = right
 tray-detached = false
@@ -199,3 +199,14 @@ menu-0-1-exec = /sbin/reboot
 
 menu-0-2 = Shutdown
 menu-0-2-exec = /sbin/poweroff
+
+[module/filesystem]
+type = internal/fs
+
+format-mounted = <label-mounted>
+label-mounted =    %percentage_used%% (%free%)
+
+mount-0 = /
+
+interval = 60
+fixed-values = true
