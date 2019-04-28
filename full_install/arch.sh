@@ -48,7 +48,6 @@ sudo pacman --noconfirm -S\
   vlc                    \
   xorg-server            \
   xorg-apps              \
-  gdm                    \
   code                   \
   network-manager-applet \
   maim                   \
@@ -57,16 +56,18 @@ sudo pacman --noconfirm -S\
   arc-gtk-theme          \
   arc-icon-theme         \
   notify-osd             \
-  xclip
+  xclip                  \
+  light-locker           \
+  lightdm
 
 yay -a -S\
   google-chrome          \
   polybar                \
   caffeine               \
-  i3lock-color
+  lightdm-slick-greeter
 
 # Enable the required services
-sudo systemctl enable gdm NetworkManager bluetooth
+sudo systemctl enable lightdm NetworkManager bluetooth
 
 # Clone the repo
 git clone https://github.com/EyeDevelop/dotfiles ~/.dotfiles

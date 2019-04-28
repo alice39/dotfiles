@@ -158,11 +158,11 @@ mode "Resize" {
 
 bindsym $mod+r mode "Resize"
 
+# Run the post-init script.
+exec --no-startup-id $HOME/.config/i3/post-init.sh
+
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# Run the post-init script.
-exec_always --no-startup-id $HOME/.config/i3/post-init.sh
 
 # Set the wallpaper
 exec_always --no-startup-id $HOME/.fehbg
