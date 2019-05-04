@@ -18,7 +18,7 @@ font-1 = Font Awesome 5 Free:style=Regular:pixelsize=11;1
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=11;1
 
 modules-left = power-menu player-mpris
-modules-right = wireless-network wired-network backlight volume filesystem battery date
+modules-right = wireless-network wired-network public-ip backlight volume filesystem battery date
 
 tray-position = right
 tray-detached = false
@@ -210,3 +210,8 @@ mount-0 = /
 
 interval = 60
 fixed-values = true
+
+[module/public-ip]
+type = custom/script
+exec = ~/.config/polybar/scripts/public-ip.sh
+interval = 2
