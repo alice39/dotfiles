@@ -187,6 +187,7 @@ smart_borders on
 new_window pixel 0
 
 # Set media keys
+exec --no-startup-id pactl upload-sample /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga  # Needed to play sample below.
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0; exec pactl play-sample audio-volume-change @DEFAULT_SINK@
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0; exec pactl play-sample audio-volume-change @DEFAULT_SINK@
 
