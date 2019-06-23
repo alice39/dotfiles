@@ -27,7 +27,6 @@ sudo pacman --noconfirm -S\
   python-pip             \
   zsh                    \
   neofetch               \
-  compton                \
   blueman                \
   gnu-netcat             \
   light                  \
@@ -64,7 +63,8 @@ yay -a -S\
   google-chrome          \
   polybar                \
   caffeine               \
-  lightdm-slick-greeter
+  lightdm-slick-greeter  \
+  compton-tryone-git
 
 # Enable the required services
 sudo systemctl enable lightdm NetworkManager bluetooth
