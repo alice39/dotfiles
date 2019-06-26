@@ -3,7 +3,7 @@ width = 100%
 height = 34
 monitor = ${env:MONITOR:}
 
-background = #f00a0a0a
+background = #750a0a0a
 foreground = #ccffffff
 
 line-color = ${bar/bottom.background}
@@ -167,7 +167,7 @@ type = internal/network
 interface = enp2s0
 interval = 3.0
 
-label-connected =   %{F#fba922}%local_ip%
+label-connected =   %{F#fba922}%local_ip% | %linkspeed%
 label-disconnected-foreground = #66
 
 [module/volume]
@@ -199,6 +199,9 @@ menu-0-1-exec = /sbin/reboot
 
 menu-0-2 = Shutdown
 menu-0-2-exec = /sbin/poweroff
+
+menu-0-3 = Hibernate
+menu-0-3-exec = /usr/bin/systemctl hibernate
 
 [module/filesystem]
 type = internal/fs

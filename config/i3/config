@@ -184,7 +184,7 @@ smart_gaps on
 smart_borders on
 
 # Remove the title
-new_window pixel 0
+default_border none
 
 # Set media keys
 exec --no-startup-id pactl upload-sample /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga  # Needed to play sample below.

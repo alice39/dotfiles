@@ -1,8 +1,11 @@
 configuration {
 	modi: "window,run,drun,ssh";
+        display-drun: "Apps";
+        display-window: "Window";
         terminal: "termite";
         ssh-client: "ssh";
+        show-icons: true;
         ssh-command: "{terminal} -e '{ssh-client} {host}'";
         run-shell-command: "{terminal} -e '{cmd}'";
 }
-@import "/home/eyedevelop/.config/rofi/themes/oxide.rasi"
+@import "/home/eyedevelop/.config/rofi/themes/WillPower3309.rasi"
