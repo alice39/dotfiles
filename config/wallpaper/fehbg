@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --recursive --randomize --bg-fill --no-fehbg '/home/eyedevelop/.config/wallpapers/' 
+feh --bg-fill '/home/eyedevelop/.config/wallpapers/tux.png' 
