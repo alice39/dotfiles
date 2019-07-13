@@ -209,8 +209,8 @@ bindsym Shift+XF86MonBrightnessDown exec light -U 1
 bindsym $mod+l exec systemctl suspend
 
 # Screenshot bindings
-bindsym $super+Shift+3 exec maim ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
-bindsym $super+Control+Shift+3 exec maim | xclip -selection clipboard -t image/png
+bindsym $super+Shift+3 exec $HOME/.config/i3/ss.sh maim ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
+bindsym $super+Control+Shift+3 exec $HOME/.config/i3/ss.sh | xclip -selection clipboard -t image/png
 
-bindsym $super+Shift+4 exec maim -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
-bindsym $super+Control+Shift+4 exec maim -s | xclip -selection clipboard -t image/png
+bindsym $super+Shift+4 exec $HOME/.config/i3/ss.sh -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
+bindsym $super+Control+Shift+4 exec $HOME/.config/i3/ss.sh -s | xclip -selection clipboard -t image/png
