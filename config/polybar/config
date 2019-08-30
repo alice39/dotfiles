@@ -164,7 +164,7 @@ label-disconnected-foreground = #66
 
 [module/wired-network]
 type = internal/network
-interface = enp2s0
+interface = ens9
 interval = 3.0
 
 label-connected =   %{F#fba922}%local_ip% | %linkspeed%
