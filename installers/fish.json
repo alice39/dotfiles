@@ -1,0 +1,10 @@
+{
+    "name": "FiSH",
+    "author": "Fish developer",
+    "depends": [
+        "sh:powerline",
+        "sh:powerline-fonts"
+    ],
+    "config_dir": "fish",
+    "install_dir": "{DOT_INSTALL_DIR}/.config/fish"
+}
