@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 
 from config import BASE_DIR, logger
 
@@ -46,7 +47,7 @@ def symlink(src, dst, is_directory=False):
         if not os.path.isdir(dst) or os.path.islink(dst):
             os.remove(dst)
         else:
-            os.removedirs(dst)
+            shutil.rmtree(dst)
 
     logger.debug("Symlinking {} to {}.".format(src, dst))
     os.symlink(src, dst, target_is_directory=is_directory)

@@ -2,8 +2,9 @@
     "name": "FiSH",
     "author": "Fish developer",
     "depends": [
-        "sh:powerline",
-        "sh:powerline-fonts"
+        "packages:fish neofetch",
+        "powerline-fonts",
+        "sh:oh-my-fish"
     ],
     "config_dir": "fish",
     "install_dir": "{DOT_INSTALL_DIR}/.config/fish"

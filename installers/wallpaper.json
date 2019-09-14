@@ -2,6 +2,7 @@
     "name": "Wallpaper",
     "author": "EyeDevelop",
     "depends": [
+        "package:python-pywal"
     ],
     "config_dir": "wallpaper",
     "config_files": {

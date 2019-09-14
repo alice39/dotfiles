@@ -2,6 +2,7 @@
     "name": "Rofi",
     "author": "DaveDavenport",
     "depends": [
+        "package:rofi"
     ],
     "config_dir": "rofi",
     "install_dir": "{DOT_INSTALL_DIR}/.config/rofi"

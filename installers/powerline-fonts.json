@@ -1,6 +1,7 @@
 {
-    "module_name": "sh:powerline-fonts",
-    "installer": "./install.sh",
-    "arguments": "",
-    "working_dir": "apps/powerline-fonts"
+    "name": "PowerLine Fonts",
+    "author": "powerline",
+    "depends": [
+        "packages:powerline-fonts-git"
+    ]
 }

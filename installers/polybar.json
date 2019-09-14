@@ -2,6 +2,7 @@
     "name": "polybar",
     "author": "jaagr",
     "depends": [
+        "package:polybar-git"
     ],
     "config_dir": "polybar",
     "install_dir": "{DOT_INSTALL_DIR}/.config/polybar"

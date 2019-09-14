@@ -1,6 +1,0 @@
-{
-    "module_name": "sh:powerline",
-    "installer": "../../custom_install_scripts/powerline.sh",
-    "arguments": "",
-    "working_dir": "apps/powerline"
-}

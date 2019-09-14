@@ -3,25 +3,11 @@
 
 ## Installation
 ### Dependencies
-This script assumes the following is installed:
-* git
-* zsh:
-  * zsh
-  * python 3
-* i3:
-  * i3-gaps
-  * polybar
-  * rofi
-  * fehbg
-* neofetch (optional)
+This script will install all the dependencies it needs.
+Do make sure yay is installed, otherwise these packages
+cannot be installed.
 
-### Submodules
-Please initialise the submodules before executing the installer.
-```bash
-git submodule update --init --recursive
-```
-
-### Actual installing! (yay)
+### Actual installing!
 **Warning:** Please look at the code before you execute blindly.
 
 The helper install script:

@@ -1,0 +1,6 @@
+{
+    "module_name": "sh:symlink_nm_dispatch",
+    "installer": "./symlink_nm_dispatch",
+    "arguments": "",
+    "working_dir": "custom_install_scripts"
+}

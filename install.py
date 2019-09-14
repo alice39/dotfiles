@@ -90,6 +90,8 @@ def main():
         except Exception as e:
             logger.error("Failed to install {}\n    {}".format(module, e))
 
+    print("\nAll done installing!")
+
 
 if __name__ == '__main__':
     try:

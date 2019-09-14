@@ -2,10 +2,13 @@
     "name": "i3 Window Manager (gaps)",
     "author": "Airblader",
     "depends": [
+        "packages:xorg-server xorg-apps xorg-xrandr i3-gaps gdm",
+        "packages:termite light-locker light-locker-settings light maim xclip network-manager-applet arc-gtk-theme arc-icon-theme gtk2 gtk3 notify-osd caffeine ntp",
         "polybar",
         "rofi",
         "wallpaper",
-        "compton"
+        "compton",
+        "gtk"
     ],
     "config_dir": "i3",
     "install_dir": "{DOT_INSTALL_DIR}/.config/i3"

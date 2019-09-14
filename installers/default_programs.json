@@ -1,0 +1,7 @@
+{
+    "name": "Default applications",
+    "author": "Various developers",
+    "depends": [
+        "packages:google-chrome-stable vlc jetbrains-toolbox blueman nautilus pavucontrol playerctl rsync code spotify discord foxitreader audacity filezilla remmina gparted transmission-gtk"
+    ]
+}

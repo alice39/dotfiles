@@ -2,6 +2,7 @@
     "name": "Compton Composite Manager",
     "author": "cjj",
     "depends": [
+        "package:compton-tryone-git"
     ],
     "config_dir": "compton",
     "config_files": {

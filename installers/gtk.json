@@ -2,6 +2,7 @@
     "name": "GTK Theme",
     "author": "eyedevelop",
     "depends": [
+        "packages:gtk3 gtk2"
     ],
     "config_dir": "gtk",
     "config_files": {

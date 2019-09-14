@@ -1,6 +1,0 @@
-{
-    "module_name": "sh:oh-my-zsh",
-    "installer": "tools/install.sh",
-    "arguments": "",
-    "working_dir": "apps/oh-my-zsh"
-}

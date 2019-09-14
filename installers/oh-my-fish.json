@@ -1,0 +1,6 @@
+{
+    "module_name": "sh:oh-my-fish",
+    "installer": "./oh-my.fish",
+    "arguments": "",
+    "working_dir": "custom_install_scripts"
+}

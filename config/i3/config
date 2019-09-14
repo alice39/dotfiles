@@ -165,7 +165,7 @@ exec --no-startup-id $HOME/.config/i3/post-init.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Set the colour theme
-exec_always --no-startup-id wal -l -i ~/.config/wallpapers -q
+exec_always --no-startup-id wal -i ~/.config/wallpapers -q
 
 # Start compton
 exec --no-startup-id compton -b

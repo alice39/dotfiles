@@ -2,6 +2,8 @@
     "name": "NetworkManager public ip dispatcher",
     "author": "EyeDevelop",
     "depends": [
+        "package:networkmanager",
+        "sh:symlink_nm_dispatch"
     ],
     "config_dir": "nm_dispatcher",
     "config_files": {

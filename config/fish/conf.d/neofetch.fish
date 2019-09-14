@@ -1,2 +1,2 @@
 # Just start neofetch...
-neofetch --catimg ~/.dotfiles/lipsum.jpg
+neofetch --ascii ~/.config/fish/lipsum.txt
