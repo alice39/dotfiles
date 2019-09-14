@@ -1,0 +1,10 @@
+{
+    "name": "NetworkManager public ip dispatcher",
+    "author": "EyeDevelop",
+    "depends": [
+    ],
+    "config_dir": "nm_dispatcher",
+    "config_files": {
+        "get-public-ip.sh": "{DOT_INSTALL_DIR}/.config/get-public-ip.sh"
+    }
+}
