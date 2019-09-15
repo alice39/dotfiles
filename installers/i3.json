@@ -2,7 +2,7 @@
     "name": "i3 Window Manager (gaps)",
     "author": "Airblader",
     "depends": [
-        "packages:xorg-server xorg-apps xorg-xrandr i3-gaps gdm",
+        "packages:xorg-server xorg-apps xorg-xrandr i3-gaps gdm tlp powertop cups",
         "packages:termite light-locker light-locker-settings light maim xclip network-manager-applet arc-gtk-theme arc-icon-theme gtk2 gtk3 notify-osd caffeine ntp",
         "packages:ttf-dejavu ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code gnu-free-fonts ttf-ancient-fonts font-mathematica",
         "polybar",
