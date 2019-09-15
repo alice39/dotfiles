@@ -1,0 +1,6 @@
+{
+    "module_name": "sh:systemd_services",
+    "installer": "./systemd_services.sh",
+    "arguments": "",
+    "working_dir": "custom_install_scripts"
+}
