@@ -1,7 +1,8 @@
 #!/bin/bash
 
-if [[ -f /etc/NetworkManager/dispatcher.d/get-public-ip.sh ]]; then
-    sudo rm -f /etc/NetworkManager/dispatcher.d/get-public-ip.sh
+if [[ -f "/etc/NetworkManager/dispatcher.d/get-public-ip.sh" ]]; then
+    sudo rm -f "/etc/NetworkManager/dispatcher.d/get-public-ip.sh"
 fi
 
-sudo ln -s /home/$(whoami)/.config/get-public-ip.sh /etc/NetworkManager/dispatcher.d/get-public-ip.sh
+sudo ln -s "/home/$(whoami)/.config/get-public-ip.sh" "/etc/NetworkManager/dispatcher.d/get-public-ip.sh"
+sudo chown root:root "/etc/NetworkManager/dispatcher.d/get-public-ip.sh"
