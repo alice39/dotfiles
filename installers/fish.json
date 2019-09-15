@@ -2,7 +2,7 @@
     "name": "FiSH",
     "author": "Fish developer",
     "depends": [
-        "packages:fish neofetch",
+        "packages:fish neofetch openssh",
         "powerline-fonts",
         "sh:oh-my-fish"
     ],
