@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install custom service files.
-cat << EOF > /etc/systemd/system/powertop-tunables.service
+cat << EOF | sudo tee /etc/systemd/system/powertop-tunables.service
 [Unit]
 Description=PowerTOP Auto Tune
 
@@ -14,7 +14,7 @@ ExecStart=/usr/bin/powertop --auto-tune
 WantedBy=multi-user.target
 EOF
 
-cat << EOF > /etc/systemd/system/lockscreen.service
+cat << EOF | sudo tee /etc/systemd/system/lockscreen.service
 [Unit]
 Description=Broadcast lockscreen time
 Before=sleep.target
