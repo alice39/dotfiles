@@ -1,0 +1,11 @@
+{
+    "name": "LibInput Gestures",
+    "author": "eyedevelop",
+    "depends": [
+        "package:libinput-gestures"
+    ],
+    "config_dir": "i3",
+    "config_files": {
+        "libinput-gestures.conf": "{DOT_INSTALL_DIR}/.config/libinput-gestures.conf"
+    }
+}

@@ -31,7 +31,7 @@ font pango:Roboto 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+$super+Return exec termite
+bindsym $mod+Control+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -214,3 +214,6 @@ bindsym $super+Control+Shift+3 exec $HOME/.config/i3/ss.sh | xclip -selection cl
 
 bindsym $super+Shift+4 exec $HOME/.config/i3/ss.sh -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
 bindsym $super+Control+Shift+4 exec $HOME/.config/i3/ss.sh -s | xclip -selection clipboard -t image/png
+
+# Gestures
+exec --no-startup-id libinput-gestures-setup start
