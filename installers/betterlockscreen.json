@@ -1,0 +1,6 @@
+{
+    "module_name": "sh:betterlockscreen",
+    "installer": "./betterlockscreen.sh",
+    "arguments": "",
+    "working_dir": "custom_install_scripts"
+}
