@@ -212,8 +212,11 @@ bindsym $mod+l exec systemctl suspend
 bindsym $super+Shift+3 exec $HOME/.config/i3/ss.sh maim ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
 bindsym $super+Control+Shift+3 exec $HOME/.config/i3/ss.sh | xclip -selection clipboard -t image/png
 
-bindsym $super+Shift+4 exec $HOME/.config/i3/ss.sh -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
-bindsym $super+Control+Shift+4 exec $HOME/.config/i3/ss.sh -s | xclip -selection clipboard -t image/png
+bindsym $super+Shift+4 exec $HOME/.config/i3/ss_c.sh -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
+bindsym $super+Control+Shift+4 exec $HOME/.config/i3/ss_c.sh -s | xclip -selection clipboard -t image/png
 
 # Gestures
 exec --no-startup-id libinput-gestures-setup start
+
+# Redshift
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
