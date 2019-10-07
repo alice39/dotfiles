@@ -1,2 +1,2 @@
-# Just start neofetch...
-neofetch --ascii ~/.config/fish/lipsum.txt
+# Start neofetch when running interactively.
+status --is-interactive; and neofetch --ascii ~/.config/fish/lipsum.txt
