@@ -195,6 +195,7 @@ bindsym Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
 bindsym Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle; exec pactl play-sample audio-volume-change @DEFAULT_SINK@
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
@@ -209,15 +210,14 @@ bindsym Shift+XF86MonBrightnessDown exec sudo light -U 1
 bindsym $mod+l exec systemctl suspend
 
 # Screenshot bindings
-bindsym $super+Shift+3 exec $HOME/.config/i3/ss.sh maim ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
+bindsym $super+Shift+3 exec $HOME/.config/i3/ss.sh ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
 bindsym $super+Control+Shift+3 exec $HOME/.config/i3/ss.sh | xclip -selection clipboard -t image/png
 
 bindsym $super+Shift+4 exec $HOME/.config/i3/ss_c.sh -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
 bindsym $super+Control+Shift+4 exec $HOME/.config/i3/ss_c.sh -s | xclip -selection clipboard -t image/png
 
 # Gestures
-exec --no-startup-id libinput-gestures-setup start
+exec_always --no-startup-id libinput-gestures-setup restart
 
 # Redshift
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id /usr/bin/systemctl --user restart redshift 
