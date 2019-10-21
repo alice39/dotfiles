@@ -8,4 +8,4 @@ configuration {
         ssh-command: "{terminal} -e '{ssh-client} {host}'";
         run-shell-command: "{terminal} -e '{cmd}'";
 }
-@import "/home/eyedevelop/.config/rofi/themes/sidetab.rasi"
+@import "~/.config/rofi/themes/sidetab.rasi"
