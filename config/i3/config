@@ -209,7 +209,7 @@ bindsym XF86MonBrightnessDown exec sudo light -U 5
 bindsym Shift+XF86MonBrightnessDown exec sudo light -U 1
 
 # Make shortcut for locking the screen
-bindsym $mod+l exec systemctl suspend
+bindsym $mod+l exec $HOME/.config/i3/locker.sh
 
 # Screenshot bindings
 bindsym $super+Shift+3 exec $HOME/.config/i3/ss.sh ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
