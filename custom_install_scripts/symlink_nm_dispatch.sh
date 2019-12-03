@@ -5,4 +5,4 @@ if [[ -f "/etc/NetworkManager/dispatcher.d/get-public-ip.sh" ]]; then
 fi
 
 sudo ln -s "/home/$(whoami)/.config/get-public-ip.sh" "/etc/NetworkManager/dispatcher.d/get-public-ip.sh"
-sudo chown root:root "/etc/NetworkManager/dispatcher.d/get-public-ip.sh"
+sudo chown root:root "/home/$(whoami)/.config/get-public-ip.sh"
