@@ -1,8 +1,8 @@
 {
-    "name": "FiSH",
+    "name": "fish",
     "author": "Fish developer",
     "depends": [
-        "packages:fish neofetch openssh",
+        "packages:fish pfetch-git openssh",
         "powerline-fonts",
         "sh:oh-my-fish"
     ],
