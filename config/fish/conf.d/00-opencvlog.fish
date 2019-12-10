@@ -1,0 +1,1 @@
+set -x OPENCV_LOG_LEVEL ERROR
