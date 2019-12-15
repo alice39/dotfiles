@@ -130,6 +130,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+Control+Left move container to workspace prev
 bindsym $mod+Shift+Control+Right move container to workspace next
 
+# Jump to urgent window
+bindsym $mod+x [urgent=latest] focus
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -184,7 +187,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id caffeine
 
 # Set the gaps
-gaps inner 8
+gaps inner 14
 gaps outer 0
 smart_gaps on
 smart_borders on
