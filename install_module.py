@@ -78,10 +78,10 @@ def install_sh_module(module_name, dot_install_dir, available_sh_modules, is_dep
     print("!!! YOU ARE ABOUT TO RUN A SHELL SCRIPT !!!")
     print("Please review the contents of this script carefully before continuing.")
     print("The script: [{}] {}".format(module["working_dir"], module["installer"]))
-    consent = input("Would you like to continue [y/N]: ")
-    consent = consent.lower() == "y"
+    no_consent = input("Would you like to continue [Y/n]: ")
+    no_consent = consent.lower() == "n"
 
-    if not consent:
+    if no_consent:
         logger.fatal("User skipped execution of shell script.")
         return True
 
