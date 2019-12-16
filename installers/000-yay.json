@@ -1,0 +1,8 @@
+{
+    "name": "Yay config file",
+    "author": "Jguer",
+    "depends": [
+    ],
+    "config_dir": "yay",
+    "install_dir": "{DOT_INSTALL_DIR}/.config/yay"
+}
