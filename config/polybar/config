@@ -187,7 +187,7 @@ type = custom/menu
 
 expand-right = true
 label-open =   
-label-close = X
+label-close =  
 
 label-separator =  |  
 
@@ -202,6 +202,9 @@ menu-0-2-exec = /sbin/poweroff
 
 menu-0-3 = Hibernate
 menu-0-3-exec = /usr/bin/systemctl hibernate
+
+menu-0-4 = Log off
+menu-0-4-exec = /usr/bin/i3-msg exit
 
 [module/filesystem]
 type = internal/fs
