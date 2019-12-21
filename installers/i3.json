@@ -3,7 +3,7 @@
     "author": "Airblader",
     "depends": [
         "packages:xorg-server xorg-apps xorg-xrandr i3-gaps betterlockscreen gdm tlp powertop cups xautolock pulseaudio-git",
-        "packages:termite redshift light maim xclip network-manager-applet arc-gtk-theme arc-icon-theme gtk2 gtk3 deadd-notification-center-bin caffeine ntp",
+        "packages:redshift light maim xclip network-manager-applet arc-gtk-theme arc-icon-theme gtk2 gtk3 deadd-notification-center-bin caffeine ntp",
         "packages:ttf-dejavu ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code gnu-free-fonts ttf-ancient-fonts font-mathematica",
         "polybar",
         "rofi",
@@ -11,7 +11,8 @@
         "compton",
         "gtk",
         "gestures",
-        "sh:betterlockscreen"
+        "sh:betterlockscreen",
+        "kitty"
     ],
     "config_dir": "i3",
     "install_dir": "{DOT_INSTALL_DIR}/.config/i3"

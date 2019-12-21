@@ -1,0 +1,10 @@
+{
+    "name": "kitty terminal emulator",
+    "author": "kovidgoyal",
+    "depends": [
+        "packages:kitty",
+        "fish"
+    ],
+    "config_dir": "kitty",
+    "install_dir": "{DOT_INSTALL_DIR}/.config/termite"
+}
