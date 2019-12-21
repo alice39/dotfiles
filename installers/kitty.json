@@ -6,5 +6,5 @@
         "fish"
     ],
     "config_dir": "kitty",
-    "install_dir": "{DOT_INSTALL_DIR}/.config/termite"
+    "install_dir": "{DOT_INSTALL_DIR}/.config/kitty"
 }
