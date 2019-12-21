@@ -9,7 +9,7 @@
 	"pacmanbin": "pacman",
 	"pacmanconf": "/etc/pacman.conf",
 	"tarbin": "bsdtar",
-	"redownload": "yes",
+	"redownload": "no",
 	"rebuild": "no",
 	"batchinstall": true,
 	"answerclean": "All",
