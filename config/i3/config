@@ -192,7 +192,7 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
 # Start compton
-exec --no-startup-id compton -b
+exec_always --no-startup-id $HOME/.config/i3/compositor.sh
 
 # Launch applets
 exec --no-startup-id nm-applet
