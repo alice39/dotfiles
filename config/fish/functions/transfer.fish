@@ -16,11 +16,11 @@ function transfer --description "Automatically uploads files to transfer.sh and 
         end
 
         if set --query _flag_max-downloads
-            set max_downloads "Max-Downloads: _flag_max-downloads"
+            set max_downloads "Max-Downloads: $_flag_max-downloads"
         end
 
         if set --query _flag_max-days
-            set max_days "Max-Days: _flag_max-days"
+            set max_days "Max-Days: $_flag_max-days"
         end
         
 
@@ -28,9 +28,8 @@ function transfer --description "Automatically uploads files to transfer.sh and 
             set --local basename (echo $file | rev | cut -d "/" -f1 | rev)
             set --local tempfile (mktemp -t transfershXXXX)
 
-            curl --progress-bar -H $max_downloads -H $max_days --upload-file $file "https://transfer.eyedevelop.org/$basename" > $tempfile
-            cat $tempfile
-            rm -f $tempfile
+            curl --progress-bar -H $max_downloads -H $max_days --upload-file $file "https://transfer.eyedevelop.org/$basename"
+            echo
         end
     end
 end
