@@ -1,4 +1,4 @@
-function transfer_get --description "Gets the file from transfer.sh using the url."
+function transfer-get --description "Gets the file from transfer.sh using the url."
     set --local options 'o/output='
     argparse $options -- $argv
 

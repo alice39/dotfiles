@@ -1,4 +1,4 @@
-function ssh_fix --description "Fixes the xterm-kitty being unknown."
+function ssh-fix --description "Fixes the xterm-kitty being unknown."
     if test (count $argv) -lt 1
         echo "Specify the SSH args please."
         return 1
