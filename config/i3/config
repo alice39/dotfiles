@@ -40,7 +40,7 @@ exec --no-startup-id /usr/bin/deadd-notification-center
 exec --no-startup-id xset led named "Scroll Lock"
 
 # start a terminal
-bindsym $mod+Control+Return exec kitty
+bindsym $mod+Control+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
