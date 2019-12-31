@@ -1,0 +1,10 @@
+{
+    "name": "Termite",
+    "author": "someboy",
+    "depends": [
+        "packages:termite",
+        "fish"
+    ],
+    "config_dir": "termite",
+    "install_dir": "{DOT_INSTALL_DIR}/.config/termite"
+}
