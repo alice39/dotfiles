@@ -1,2 +1,2 @@
 set -x EDITOR nano
-set -x TERMINAL kitty
+set -x TERMINAL termite

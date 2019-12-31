@@ -4,6 +4,6 @@ function ssh-fix --description "Fixes the xterm-kitty being unknown."
         return 1
     end
 
-    infocmp xterm-kitty | ssh $argv tic -x -o \~/.terminfo /dev/stdin
+    infocmp xterm-termite | ssh $argv tic -x -o \~/.terminfo /dev/stdin
     echo "Done!"
 end
