@@ -8,18 +8,18 @@ function transfer --description "Automatically uploads files to transfer.sh and 
     end
 
     for file in $argv
-        if set --query _flag_recursive; and test -d $file
+        if set --query _flag_r; and test -d $file
             echo "--  Recursing into directory $file..."
             transfer -r $file/*
         else if test -d $file
             echo "--  Ignoring directory $file..."
         end
 
-        if set --query _flag_max-downloads
+        if set --query _flag_m
             set max_downloads "Max-Downloads: $_flag_max-downloads"
         end
 
-        if set --query _flag_max-days
+        if set --query _flag_d
             set max_days "Max-Days: $_flag_max-days"
         end
         

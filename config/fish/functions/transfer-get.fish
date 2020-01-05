@@ -7,18 +7,18 @@ function transfer-get --description "Gets the file from transfer.sh using the ur
         return 1
     end
 
-    set --query _flag_output; or set --local _flag_output ./
+    set --query _flag_o; or set --local _flag_o ./
     set --local previous_dir (pwd)
-    cd $_flag_output
+    cd $_flag_o
 
-    if not test -d $_flag_output
-        mkdir -p $_flag_output; or exit 1
+    if not test -d $_flag_o
+        mkdir -p $_flag_o; or exit 1
     end
 
     for url in $argv
         curl -OL $url >/dev/null 2>&1
         set --local basename (echo $url | rev | cut -d "/" -f1 | rev)
-        echo "Downloaded $_flag_output/$basename"
+        echo "Downloaded $_flag_o/$basename"
     end
 
     cd $previous_dir
