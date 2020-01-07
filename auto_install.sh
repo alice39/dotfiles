@@ -18,7 +18,7 @@ round() {
 
 calculate_swap() {
     memsize=$(free -h | grep Mem | awk '{print $2}' | sed 's/[A-Za-z]//g')
-    memsize=$(round $memsize)
+    memsize=$(round "$memsize")
     memsize=$((memsize*1024+512))
 
     echo -n "$memsize"
@@ -118,8 +118,8 @@ install_main() {
 
     arch-chroot /mnt ln -sf "/usr/share/zoneinfo/$TIMEZONE" /etc/localtime
     arch-chroot /mnt hwclock --systohc
-    arch-chroot /mnt sed -i 's/#en_US.UTF-8/en_US.UTF-8/g" /etc/locale.gen
-    arch-chroot /mnt sed -i 's/#en_GB.UTF-8/en_GB.UTF-8/g" /etc/locale.gen
+    arch-chroot /mnt sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen
+    arch-chroot /mnt sed -i 's/#en_GB.UTF-8/en_GB.UTF-8/g' /etc/locale.gen
     arch-chroot /mnt locale-gen && echo -e "LANG=en_GB.UTF-8\nLANGUAGE=en_US.UTF-8" > /etc/locale.conf
     arch-chroot /mnt echo "$HOSTNAME" > /etc/hostname
     arch-chroot /mnt cat << EOF > /etc/hosts
@@ -130,7 +130,7 @@ EOF
 
     if [[ "$LVM" -eq 1 ]]; then
         arch-chroot /mnt sed -i 's/block filesystems/block lvm2 filesystems/g' /etc/mkinitcpio.conf
-        arch-chroot /mnt mkinitcpio -p $(ls /etc/mkinitcpio.d/ | sed 's/.preset//g')
+        arch-chroot /mnt mkinitcpio -p "$(ls /etc/mkinitcpio.d/ | sed 's/.preset//g')"
     fi
 
     arch-chroot /mnt sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
@@ -227,7 +227,7 @@ if [[ -z "$DISK" || -z "$FORMAT" || -z "$HOSTNAME" || -z "$USERNAME" ]]; then
     exit 1
 fi
 
-if [[ "$FORMAT" != "gpt" || "$FORMAT" != "mbr" ]]; then
+if [[ "$FORMAT" != "gpt" && "$FORMAT" != "mbr" ]]; then
     echo "Partition table must either be 'gpt' or 'mbr'."
     exit 1
 fi
@@ -240,7 +240,7 @@ fi
 # Ask for user consent.
 echo "WARNING: ALL DATA ON DISK $DISK WILL BE DELETED."
 echo -n 'DO YOU WISH TO CONTINUE (y|N): '
-read consent
+read -r consent
 
 if [[ "$consent" != "y" ]]; then
     echo "User did not give consent."
