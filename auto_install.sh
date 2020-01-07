@@ -168,7 +168,6 @@ while [[ $# -gt 0 ]]; do
         -l|--use-lvm)
         LVM=1
         shift
-        shift
         ;;
 
         -h|--hostname)
@@ -180,7 +179,6 @@ while [[ $# -gt 0 ]]; do
         -z|--use-zen)
         ZEN=1
         shift
-        shift
         ;;
 
         --dotfiles)
@@ -190,8 +188,8 @@ while [[ $# -gt 0 ]]; do
         else
             DOTFILES=1
             DOTFILES_URL="$2"
+            shift
         fi
-        shift
         shift
         ;;
 
@@ -209,8 +207,6 @@ while [[ $# -gt 0 ]]; do
 
         --help)
         help
-        shift
-        shift
         ;;
 
         *)
