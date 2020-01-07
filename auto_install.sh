@@ -25,21 +25,21 @@ calculate_swap() {
 }
 
 partition_mbr_nlvm() {
-    parted "$DISK" mklabel msdos
-    parted "$DISK" mkpart primary 1MiB 500MiB
-    parted "$DISK" set 1 boot on
+    parted --script "$DISK" mklabel msdos
+    parted --script "$DISK" mkpart primary 1MiB 500MiB
+    parted --script "$DISK" set 1 boot on
 
     memsize=$(calculate_swap)
 
-    parted "$DISK" mkpart primary 500MiB "${memsize}MiB"
-    parted "$DISK" mkpart primary "${memsize}MiB" 100%
+    parted --script "$DISK" mkpart primary 500MiB "${memsize}MiB"
+    parted --script "$DISK" mkpart primary "${memsize}MiB" 100%
 }
 
 partition_mbr_lvm() {
-    parted "$DISK" mklabel msdos
-    parted "$DISK" mkpart primary 1MiB 500MiB
-    parted "$DISK" set 1 boot on
-    parted "$DISK" mkpart primary 500MiB 100%
+    parted --script "$DISK" mklabel msdos
+    parted --script "$DISK" mkpart primary 1MiB 500MiB
+    parted --script "$DISK" set 1 boot on
+    parted --script "$DISK" mkpart primary 500MiB 100%
 
     (pvcreate "${DISK}p2" || pvcreate "${DISK}2") || (echo "Cannot partition disk." && exit 1)
     vgcreate arch-vg "${DISK}p2" || vgcreate arch-vg "${DISK}2"
@@ -63,21 +63,21 @@ format_nlvm() {
 }
 
 partition_gpt_nlvm() {
-    parted "$DISK" mklabel gpt
-    parted "$DISK" mkpart primary 1MiB 500MiB
-    parted "$DISK" set 1 esp on
+    parted --script "$DISK" mklabel gpt
+    parted --script "$DISK" mkpart primary 1MiB 500MiB
+    parted --script "$DISK" set 1 esp on
 
     memsize=$(calculate_swap)
 
-    parted "$DISK" mkpart primary 500MiB "${memsize}MiB"
-    parted "$DISK" mkpart primary "${memsize}MiB" 100%
+    parted --script "$DISK" mkpart primary 500MiB "${memsize}MiB"
+    parted --script "$DISK" mkpart primary "${memsize}MiB" 100%
 }
 
 partition_gpt_lvm() {
-    parted "$DISK" mklabel gpt
-    parted "$DISK" mkpart primary 1MiB 500MiB
-    parted "$DISK" set 1 esp on
-    parted "$DISK" mkpart primary 500MiB 100%
+    parted --script "$DISK" mklabel gpt
+    parted --script "$DISK" mkpart primary 1MiB 500MiB
+    parted --script "$DISK" set 1 esp on
+    parted --script "$DISK" mkpart primary 500MiB 100%
 
     (pvcreate "${DISK}p2" || pvcreate "${DISK}2") || (echo "Cannot partition disk." && exit 1)
     vgcreate arch-vg "${DISK}p2" || vgcreate arch-vg "${DISK}2"
@@ -277,4 +277,13 @@ else
 fi
 
 # Run the install.
+install_main
 
+# Install the bootloader.
+if [[ "$FORMAT" == "gpt" ]]; then
+    bootloader_gpt
+else
+    bootloader_mbr
+fi
+
+echo -e "\n\nDone!!"
