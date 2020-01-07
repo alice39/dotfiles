@@ -286,4 +286,4 @@ else
     bootloader_mbr
 fi
 
-echo -e "\n\nDone!!"
+echo -e '\n\nDone!!'
