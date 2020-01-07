@@ -244,7 +244,7 @@ if [[ "$consent" != "y" ]]; then
 fi
 
 # Check internet
-if [[ ! $(ping 1.1.1.1) && ! $(ping 8.8.8.8) ]]; then
+if [[ ! $(ping -c 5 1.1.1.1) && ! $(ping -c 5 8.8.8.8) ]]; then
     echo "Please connect to the internet before you run this script."
     exit 1
 fi
