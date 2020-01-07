@@ -239,7 +239,7 @@ fi
 
 # Ask for user consent.
 echo "WARNING: ALL DATA ON DISK $DISK WILL BE DELETED."
-echo -n "DO YOU WISH TO CONTINUE (y|N): "
+echo -n 'DO YOU WISH TO CONTINUE (y|N): '
 read consent
 
 if [[ "$consent" != "y" ]]; then
