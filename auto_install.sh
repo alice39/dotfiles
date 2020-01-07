@@ -252,3 +252,29 @@ if [[ ! $(ping 1.1.1.1) && ! $(ping 8.8.8.8) ]]; then
     echo "Please connect to the internet before you run this script."
     exit 1
 fi
+
+# Format the disk
+if [[ "$FORMAT" == "gpt" ]]; then
+    if [[ "$LVM" -eq 1 ]]; then
+        partition_gpt_lvm
+        format_lvm
+        mount_lvm
+    else
+        partition_gpt_nlvm
+        format_nlvm
+        mount_nlvm
+    fi
+else
+    if [[ "$LVM" -eq 1 ]]; then
+        partition_mbr_lvm
+        format_lvm
+        mount_lvm
+    else
+        partition_mbr_nlvm
+        format_nlvm
+        mount_nlvm
+    fi
+fi
+
+# Run the install.
+
