@@ -46,8 +46,8 @@ partition_mbr_lvm() {
 
     memsize=$(calculate_swap)
     memsize=$((memsize-512))
-    lvcreate -L "${memsize}M" -n swap arch-vg
-    lvcreate -l 100%FREE -n root arch-vg
+    lvcreate -L "${memsize}M" -n swap archvg
+    lvcreate -l 100%FREE -n root archvg
 }
 
 format_lvm() {
@@ -84,8 +84,8 @@ partition_gpt_lvm() {
 
     memsize=$(calculate_swap)
     memsize=$((memsize-512))
-    lvcreate -L "${memsize}M" -n swap arch-vg
-    lvcreate -l 100%FREE -n root arch-vg
+    lvcreate -L "${memsize}M" -n swap archvg
+    lvcreate -l 100%FREE -n root archvg
 }
 
 mount_lvm() {
