@@ -52,8 +52,8 @@ partition_mbr_lvm() {
 
 format_lvm() {
     mkfs.ext4 "${DISK}p1" || mkfs.ext4 "${DISK}1"
-    mkswap /dev/mapper/arch-vg-swap
-    mkfs.ext4 /dev/mapper/arch-vg-root
+    mkswap /dev/mapper/archvg-swap
+    mkfs.ext4 /dev/mapper/archvg-root
 }
 
 format_nlvm() {
@@ -89,10 +89,10 @@ partition_gpt_lvm() {
 }
 
 mount_lvm() {
-    mount /dev/mapper/arch-vg-root /mnt
+    mount /dev/mapper/archvg-root /mnt
     mkdir -p /mnt/boot
     mount "${DISK}p1" /mnt/boot || mount "${DISK}1" /mnt/boot
-    swapon /dev/mapper/arch-vg-swap
+    swapon /dev/mapper/archvg-swap
 }
 
 mount_nlvm() {
