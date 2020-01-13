@@ -42,7 +42,7 @@ partition_mbr_lvm() {
     parted --script "$DISK" mkpart primary 500MiB 100%
 
     (pvcreate "${DISK}p2" || pvcreate "${DISK}2") || (echo "Cannot partition disk." && exit 1)
-    vgcreate arch-vg "${DISK}p2" || vgcreate arch-vg "${DISK}2"
+    vgcreate archvg "${DISK}p2" || vgcreate archvg "${DISK}2"
 
     memsize=$(calculate_swap)
     memsize=$((memsize-512))
@@ -80,7 +80,7 @@ partition_gpt_lvm() {
     parted --script "$DISK" mkpart primary 500MiB 100%
 
     (pvcreate "${DISK}p2" || pvcreate "${DISK}2") || (echo "Cannot partition disk." && exit 1)
-    vgcreate arch-vg "${DISK}p2" || vgcreate arch-vg "${DISK}2"
+    vgcreate archvg "${DISK}p2" || vgcreate archvg "${DISK}2"
 
     memsize=$(calculate_swap)
     memsize=$((memsize-512))
@@ -109,7 +109,7 @@ install_main() {
         KERNEL="linux linux-headers"
     fi
 
-    pacstrap --confirm -i /mnt base base-devel networkmanager "$KERNEL"
+    pacstrap /mnt base base-devel networkmanager "$KERNEL"
     genfstab -U /mnt > /mnt/etc/fstab
 
     if [[ ! -f "/usr/share/zoneinfo/$TIMEZONE" ]]; then
