@@ -109,7 +109,7 @@ install_main() {
         KERNEL="linux linux-headers"
     fi
 
-    pacstrap /mnt base base-devel networkmanager "$KERNEL"
+    pacstrap /mnt base base-devel networkmanager "${KERNEL[@]/#/-}"
     genfstab -U /mnt > /mnt/etc/fstab
 
     if [[ ! -f "/usr/share/zoneinfo/$TIMEZONE" ]]; then
