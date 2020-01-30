@@ -26,8 +26,6 @@ function transfer --description "Automatically uploads files to transfer.sh and 
 
         if test -f $file
             set --local basename (echo $file | rev | cut -d "/" -f1 | rev)
-            set --local tempfile (mktemp -t transfershXXXX)
-
             curl --progress-bar -H $max_downloads -H $max_days --upload-file $file "https://transfer.eyedevelop.org/$basename"
             echo
         end
