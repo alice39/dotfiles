@@ -54,13 +54,13 @@ bindsym $mod+m exec rofi -show ssh
 # start applets
 exec --no-startup-id nm-applet
 
-# alternatively, you can use the cursor keys:
+# Change window focus:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# alternatively, you can use the cursor keys:
+# Move window:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
