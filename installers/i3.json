@@ -3,7 +3,7 @@
     "author": "Airblader",
     "depends": [
         "packages:xorg-server xorg-apps xorg-xrandr i3-gaps betterlockscreen gdm pulseaudio-bluetooth-a2dp-gdm-fix tlp powertop cups xautolock pulseaudio pulseaudio-modules-bt-git libldac",
-        "packages:redshift light maim xclip network-manager-applet arc-gtk-theme arc-icon-theme gtk2 gtk3 deadd-notification-center-bin caffeine ntp",
+        "packages:redshift xss-lock light maim xclip network-manager-applet arc-gtk-theme arc-icon-theme gtk2 gtk3 deadd-notification-center-bin caffeine ntp",
         "packages:ttf-dejavu ttf-roboto noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code gnu-free-fonts ttf-ancient-fonts font-mathematica",
         "polybar",
         "rofi",
