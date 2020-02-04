@@ -16,6 +16,7 @@ EOF
 
 # Enable services.
 sudo systemctl enable NetworkManager
+sudo systemctl enable NetworkManager-dispatcher
 sudo systemctl enable gdm
 sudo systemctl enable tlp
 sudo systemctl enable tlp-sleep
