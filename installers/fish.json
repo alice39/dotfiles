@@ -2,7 +2,7 @@
     "name": "fish",
     "author": "Fish developer",
     "depends": [
-        "packages:fish pfetch-git openssh",
+        "packages:fish pfetch-git openssh pacman-contrib",
         "powerline-fonts",
         "sh:oh-my-fish"
     ],
