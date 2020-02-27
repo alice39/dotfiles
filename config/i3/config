@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 set $super Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -47,6 +47,9 @@ bindsym $mod+Shift+q kill
 
 # bind rofi
 bindsym $mod+d exec rofi -show drun
+
+# bind locker
+bindsym $mod+l exec $HOME/.config/i3/locker.sh
 
 # bind rofi ssh
 bindsym $mod+m exec rofi -show ssh
@@ -202,7 +205,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id caffeine
 
 # Set the gaps
-gaps inner 14
+gaps inner 2
 gaps outer 0
 smart_gaps on
 smart_borders on
@@ -231,9 +234,6 @@ bindsym Shift+XF86MonBrightnessUp exec sudo light -A 1
 bindsym XF86MonBrightnessDown exec sudo light -U 5
 bindsym Shift+XF86MonBrightnessDown exec sudo light -U 1
 
-# Make shortcut for locking the screen
-bindsym $mod+l exec $HOME/.config/i3/locker.sh
-
 # Screenshot bindings
 bindsym $super+Shift+3 exec $HOME/.config/i3/ss.sh ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
 bindsym $super+Control+Shift+3 exec $HOME/.config/i3/ss.sh | xclip -selection clipboard -t image/png
@@ -245,4 +245,4 @@ bindsym $super+Control+Shift+4 exec $HOME/.config/i3/ss_c.sh -s | xclip -selecti
 exec_always --no-startup-id libinput-gestures-setup restart
 
 # Redshift
-exec --no-startup-id /usr/bin/redshift -l 52.220852:6.890950
+# exec --no-startup-id /usr/bin/redshift -l 52.220852:6.890950
