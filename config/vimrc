@@ -8,6 +8,7 @@ set t_Co=256
 set cursorline
 
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
 
 " Package manager
