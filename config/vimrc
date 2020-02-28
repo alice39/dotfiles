@@ -17,6 +17,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Theme
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 
+" Another theme
+Plugin 'arzg/vim-colors-xcode'
+
 " Auto completeion for C++, Rust, GO, Java, ...
 Plugin 'valloric/youcompleteme'
 
@@ -62,7 +65,9 @@ Plugin 'mileszs/ack.vim'
 call vundle#end()            " required
 
 " Color theme
-colorscheme onehalfdark
+" colorscheme onehalfdark
+" colorscheme xcodedark
+colorscheme xcodedarkhc
 let g:airline_theme='onehalfdark'
 
 " Nerdtree
