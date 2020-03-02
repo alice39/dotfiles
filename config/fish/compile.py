@@ -19,7 +19,7 @@ def main():
         os.mkdir("build")
     os.chdir("build")
 
-    os.system("cmake .. -DCMAKE_CXX_COMPILER=/usr/bin/clang++")
+    os.system("cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_COMPILER=/usr/bin/clang++")
     os.system("cmake --build . -- -j $(nproc)")
 
 

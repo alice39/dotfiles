@@ -1,0 +1,6 @@
+{
+	"module_name": "editor:vim",
+	"installer": "./custom_install_scripts/vim.sh",
+	"arguments": "",
+	"working_dir": "."
+}
