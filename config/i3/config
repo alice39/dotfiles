@@ -33,6 +33,9 @@ floating_modifier $mod
 # Start PulseAudio
 # exec --no-startup-id pulseaudio -k && pulseaudio --start
 
+# Start the optimus manager
+exec --no-startup-id optimus-manager-qt
+
 # Start the notification daemon
 exec --no-startup-id /usr/bin/deadd-notification-center
 

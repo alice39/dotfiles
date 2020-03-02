@@ -62,6 +62,9 @@ Plugin 'jiangmiao/auto-pairs'
 " Ack
 Plugin 'mileszs/ack.vim'
 
+" Protobuf support
+Bundle 'uarun/vim-protobuf'
+
 call vundle#end()            " required
 
 " Color theme

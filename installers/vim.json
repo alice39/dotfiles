@@ -1,5 +1,5 @@
 {
-	"module_name": "editor:vim",
+	"module_name": "vim",
 	"installer": "./custom_install_scripts/vim.sh",
 	"arguments": "",
 	"working_dir": "."
