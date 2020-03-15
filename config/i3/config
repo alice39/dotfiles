@@ -186,17 +186,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id wal -i ~/.config/wallpapers -q
 exec_always --no-startup-id xrdb -merge $HOME/.cache/wal/colors.Xresources
 
-set_from_resource $fg color7 #f0f0f0
-set_from_resource $bg color2 #f0f0f0
-
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-
-client.background       $bg
-
 # Start compton
 exec_always --no-startup-id $HOME/.config/i3/compositor.sh
 
@@ -214,8 +203,8 @@ smart_gaps on
 smart_borders on
 
 # Remove the title
-default_border pixel 4
-default_floating_border pixel 4
+default_border pixel 0
+default_floating_border pixel 0
 hide_edge_borders none
 
 # Set media keys
