@@ -1,4 +1,4 @@
-# EyeDevelop's DotFiles
+# Yuhanun's DotFiles
 ![Some image of dotfiles I found](img/dotfiles.png)
 
 ## Installation
