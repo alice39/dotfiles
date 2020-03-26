@@ -39,6 +39,9 @@ exec --no-startup-id optimus-manager-qt
 # Start the notification daemon
 exec --no-startup-id /usr/bin/deadd-notification-center
 
+# Start NextCloud sync
+exec --no-startup-id /usr/bin/nextcloud
+
 # Start LED lights on keyboard
 exec --no-startup-id xset led named "Scroll Lock"
 
