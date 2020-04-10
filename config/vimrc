@@ -20,9 +20,6 @@ Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 " Another theme
 Plugin 'arzg/vim-colors-xcode'
 
-" Auto completeion for C++, Rust, GO, Java, ...
-Plugin 'valloric/youcompleteme'
-
 " Directory tree
 Plugin 'preservim/nerdtree'
 
