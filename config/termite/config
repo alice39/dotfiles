@@ -1,2 +1,5 @@
 [options]
 font = Fira Mono for Powerline 11
+
+[colors]
+background = rgba(0, 0, 0, 0.7)

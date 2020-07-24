@@ -2,6 +2,6 @@
     "name": "Default applications",
     "author": "Various developers",
     "depends": [
-        "packages:google-chrome thunderbird firefox vlc jetbrains-toolbox nautilus pavucontrol playerctl pulseaudio pulseaudio-modules-bt-git pulseaudio-alsa code spotify discord audacity remmina gparted transmission-gtk parsec-bin"
+        "packages:google-chrome thunderbird firefox vlc jetbrains-toolbox nautilus pavucontrol playerctl pulseaudio pulseaudio-modules-bt-git pulseaudio-alsa code spotify discord audacity remmina gparted transmission-gtk parsec-bin flameshot"
     ]
 }

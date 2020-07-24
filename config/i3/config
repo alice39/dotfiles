@@ -46,7 +46,7 @@ exec --no-startup-id /usr/bin/nextcloud
 exec --no-startup-id xset led named "Scroll Lock"
 
 # start a terminal
-bindsym $mod+Control+Return exec i3-sensible-terminal
+bindsym $mod+Control+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -186,7 +186,7 @@ exec --no-startup-id $HOME/.config/i3/post-init.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Set the colour theme
-exec_always --no-startup-id wal -i ~/.config/wallpapers -q
+exec_always --no-startup-id wal -i ~/.config/wallpapers/bg0.jpg -q
 exec_always --no-startup-id xrdb -merge $HOME/.cache/wal/colors.Xresources
 
 # Start compton
@@ -230,14 +230,25 @@ bindsym XF86MonBrightnessDown exec sudo light -U 5
 bindsym Shift+XF86MonBrightnessDown exec sudo light -U 1
 
 # Screenshot bindings
-bindsym $super+Shift+3 exec $HOME/.config/i3/ss.sh ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
-bindsym $super+Control+Shift+3 exec $HOME/.config/i3/ss.sh | xclip -selection clipboard -t image/png
+#bindsym $super+Shift+3 exec $HOME/.config/i3/ss.sh ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
+#bindsym $super+Control+Shift+3 exec $HOME/.config/i3/ss.sh | xclip -selection clipboard -t image/png
 
-bindsym $super+Shift+4 exec $HOME/.config/i3/ss_c.sh -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
-bindsym $super+Control+Shift+4 exec $HOME/.config/i3/ss_c.sh -s | xclip -selection clipboard -t image/png
+#bindsym $super+Shift+4 exec $HOME/.config/i3/ss_c.sh -s ~/Pictures/Screenshot\ $(date +'%d-%m-%Y-%H:%M').png
+#bindsym $super+Control+Shift+4 exec $HOME/.config/i3/ss_c.sh -s | xclip -selection clipboard -t image/png
 
 # Gestures
 exec_always --no-startup-id libinput-gestures-setup restart
 
 # Redshift
 # exec --no-startup-id /usr/bin/redshift -l 52.220852:6.890950
+
+# Profile Settings
+
+# I have some broken keys, so I've changes some of them
+#exec_always --no-startup-id xmodmap $HOME/.xmod
+exec_always --no-startup-id compton --config $HOME/.compton.conf
+
+# take a screenshot using flameshot
+bindsym $mod+Print exec flameshot gui
+# toggle notifcations
+bindsym $mod+p exec kill -s USR1 $(pidof deadd-notification-center)

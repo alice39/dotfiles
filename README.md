@@ -1,4 +1,4 @@
-# Yuhanun's DotFiles
+# A.L.I.C.E's DotFiles
 ![Some image of dotfiles I found](img/dotfiles.png)
 
 ## Installation
