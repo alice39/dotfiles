@@ -1,6 +1,6 @@
 {
 	"module_name": "vim",
-	"installer": "./custom_install_scripts/vim.sh",
+	"installer": "./custom_install_scripts/neovim.sh",
 	"arguments": "",
 	"working_dir": "."
 }

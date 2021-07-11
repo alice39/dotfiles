@@ -52,7 +52,7 @@ bindsym $mod+Control+Return exec termite
 bindsym $mod+Shift+q kill
 
 # bind rofi
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show drun -font "OCR-ABT 11"
 
 # bind locker
 bindsym $mod+l exec $HOME/.config/i3/locker.sh
@@ -245,8 +245,7 @@ exec_always --no-startup-id libinput-gestures-setup restart
 # Profile Settings
 
 # I have some broken keys, so I've changes some of them
-#exec_always --no-startup-id xmodmap $HOME/.xmod
-exec_always --no-startup-id compton --config $HOME/.compton.conf
+exec_always --no-startup-id xmodmap $HOME/.xmod
 
 # take a screenshot using flameshot
 bindsym $mod+Print exec flameshot gui

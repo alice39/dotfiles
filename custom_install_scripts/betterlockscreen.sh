@@ -1,3 +1,4 @@
 #!/bin/bash
 
-betterlockscreen -u ~/.config/wallpapers
+ln -n $PWD/config/lockscreen.png ~/.config/lockscreen.png
+betterlockscreen -u ~/.config/lockscreen.png

@@ -50,7 +50,7 @@ font-1 = ${bar/top.font-1}
 font-2 = ${bar/top.font-2}
 
 modules-left = i3
-modules-right = cpu memory
+modules-right = net netcable cpu memory
 
 [module/backlight]
 type = internal/backlight
@@ -112,7 +112,7 @@ label-urgent-padding = 3
 
 [module/date]
 type = internal/date
-date = %%{F#99}%d-%m-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
+date = %%{F#fff}%d-%m-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
 date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M:%%{F#fba922}%S
 
 [module/memory]
@@ -177,22 +177,22 @@ label-disconnected-foreground = #66
 type = internal/pulseaudio
 
 format-volume = <ramp-volume> <label-volume>
-label-muted =   
+label-muted = 
 label-muted-foreground = #66
 
 label-volume = %percentage%%
-ramp-volume-0 =   
-ramp-volume-1 =   
-ramp-volume-2 =   
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 [module/power-menu]
 type = custom/menu
 
 expand-right = true
-label-open =   
-label-close =  
+label-open = 
+label-close = 
 
-label-separator =  |  
+label-separator =  |
 
 menu-0-0 = Sleep
 menu-0-0-exec = /usr/bin/systemctl suspend
@@ -224,3 +224,13 @@ fixed-values = true
 type = custom/script
 exec = ~/.config/polybar/scripts/public-ip.sh
 interval = 2
+
+[module/net]
+type = internal/network
+interface = wlp2s0
+label-connected = %{F#FFFFFF}  %ifname%  %{F#fba922}%downspeed% %{F#FFFFFF} %{F#fba922}%upspeed%
+
+[module/netcable]
+type = internal/network
+interface = enp8s0f5
+label-connected = %{F#FFFFFF}  %ifname%  %{F#fba922}%downspeed% %{F#FFFFFF} %{F#fba922}%upspeed%

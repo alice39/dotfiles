@@ -1,5 +1,6 @@
 [options]
-font = Fira Mono for Powerline 11
+# font = Fira Mono for Powerline 11
+font = OCR-ABT 12
 
 [colors]
-background = rgba(0, 0, 0, 0.7)
+background = rgba(0, 0, 0, 0.78)
